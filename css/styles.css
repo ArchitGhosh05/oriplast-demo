@@ -1,0 +1,396 @@
+/* ============================================
+   OriPlast — Design System & Custom Styles
+   Red & White Brand Theme
+   ============================================ */
+
+/* --- Base & Smooth Scroll --- */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+::selection {
+  background: rgba(220, 38, 38, 0.35);
+  color: #fff;
+}
+
+/* --- Brand Logo --- */
+.brand-logo-wrap {
+  line-height: 0;
+}
+
+.brand-logo {
+  display: block;
+  max-width: 140px;
+}
+.glass-nav {
+  background: rgba(26, 26, 26, 0.65);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-nav.scrolled {
+  background: rgba(26, 26, 26, 0.85);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* --- Typography --- */
+.gradient-text {
+  background: linear-gradient(135deg, #DC2626 0%, #FFFFFF 50%, #DC2626 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* --- Navigation Links --- */
+.nav-link {
+  position: relative;
+  color: rgba(148, 163, 184, 1);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #DC2626, #FFFFFF);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* --- Buttons --- */
+.magnetic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: 0.875rem;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #DC2626, #991B1B);
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.35);
+}
+
+.btn-primary .btn-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn-primary:hover .btn-bg {
+  opacity: 1;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 30px rgba(220, 38, 38, 0.45);
+}
+
+.btn-outline {
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline .btn-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(220, 38, 38, 0.08);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline:hover {
+  border-color: rgba(220, 38, 38, 0.5);
+}
+
+.btn-outline:hover .btn-bg {
+  transform: scaleX(1);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Hero Visual --- */
+.hero-visual {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 80px rgba(220, 38, 38, 0.1);
+}
+
+.flow-line {
+  animation: flowDash 3s linear infinite;
+}
+
+.flow-line.delay-1 {
+  animation-delay: -1s;
+}
+
+.flow-line.delay-2 {
+  animation-delay: -2s;
+}
+
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* --- Bento Cards --- */
+.bento-card {
+  position: relative;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.1s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.bento-card:hover {
+  border-color: rgba(220, 38, 38, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(220, 38, 38, 0.15),
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.bento-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(220, 38, 38, 0.1),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.bento-card:hover .bento-glow {
+  opacity: 1;
+}
+
+/* --- Tilt Cards --- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+}
+
+/* --- Tech Feature Cards --- */
+.tech-feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.35s ease;
+}
+
+.tech-feature-card:hover {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+  transform: translateY(-2px);
+}
+
+/* --- Form Inputs --- */
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  color: #fff;
+  font-size: 0.9375rem;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: rgba(100, 116, 139, 0.7);
+}
+
+.form-input:focus {
+  border-color: rgba(220, 38, 38, 0.6);
+  background: rgba(220, 38, 38, 0.05);
+  box-shadow:
+    0 0 0 3px rgba(220, 38, 38, 0.12),
+    0 0 20px rgba(220, 38, 38, 0.15);
+}
+
+.form-input:invalid:not(:placeholder-shown) {
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+/* --- Footer --- */
+.footer-link {
+  color: rgba(100, 116, 139, 1);
+  font-size: 0.875rem;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.625rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(148, 163, 184, 1);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #fff;
+  background: rgba(220, 38, 38, 0.2);
+  border-color: rgba(220, 38, 38, 0.4);
+  opacity: 1;
+}
+
+/* --- Scroll Reveal --- */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-up.delay-100 { transition-delay: 0.1s; }
+.reveal-up.delay-200 { transition-delay: 0.2s; }
+
+/* --- Demo Modal --- */
+#demo-modal.active {
+  display: flex;
+}
+
+#demo-modal.active > div:last-child {
+  animation: modalIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* --- Navbar mobile menu --- */
+#mobile-menu.open {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Kinetic scroll momentum (subtle) --- */
+#smooth-scroll-container {
+  scroll-behavior: smooth;
+}
+
+/* --- Custom scrollbar --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(220, 38, 38, 0.5);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(239, 68, 68, 0.7);
+}
