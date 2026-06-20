@@ -101,9 +101,13 @@
   /* ── Counter Animation ── */
   function initCounters() {
     const counters = document.querySelectorAll('.counter');
-    let animated = false;
+    if (!counters.length) return;
+    const animated = new Set();
 
     function animateCounter(el) {
+      if (animated.has(el)) return;
+      animated.add(el);
+
       const target = parseFloat(el.dataset.target);
       const suffix = el.dataset.suffix || '';
       const decimals = parseInt(el.dataset.decimals || '0', 10);
@@ -138,18 +142,52 @@
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && !animated) {
-            animated = true;
-            counters.forEach((counter) => animateCounter(counter));
-            observer.disconnect();
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('counter')) {
+              animateCounter(entry.target);
+            } else {
+              entry.target.querySelectorAll('.counter').forEach(animateCounter);
+            }
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.35 }
     );
 
-    const metricsSection = document.getElementById('metrics');
-    if (metricsSection) observer.observe(metricsSection);
+    counters.forEach((counter) => observer.observe(counter));
+  }
+
+  /* ── Testimonial Slider ── */
+  function initTestimonialSlider() {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.testimonial-dot');
+    if (!slides.length) return;
+
+    let current = 0;
+    let intervalId;
+
+    function goTo(index) {
+      current = index;
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+    }
+
+    function next() {
+      goTo((current + 1) % slides.length);
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        goTo(parseInt(dot.dataset.slide, 10));
+        clearInterval(intervalId);
+        intervalId = setInterval(next, 6000);
+      });
+    });
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced) {
+      intervalId = setInterval(next, 6000);
+    }
   }
 
   /* ── 3D Tilt Effect on Cards ── */
@@ -206,42 +244,11 @@
     });
   }
 
-  /* ── Demo Modal ── */
-  function initDemoModal() {
-    const modal = document.getElementById('demo-modal');
-    const openBtn = document.getElementById('demo-btn');
-    const closeBtn = document.getElementById('demo-close');
-    const closeBtnAlt = document.getElementById('demo-close-btn');
-    const overlay = document.getElementById('demo-overlay');
-
-    function openModal() {
-      modal.classList.remove('hidden');
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      modal.classList.remove('active');
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    openBtn.addEventListener('click', openModal);
-    closeBtn.addEventListener('click', closeModal);
-    closeBtnAlt.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('active')) {
-        closeModal();
-      }
-    });
-  }
-
   /* ── Contact Form ── */
   function initContactForm() {
     const form = document.getElementById('contact-form');
     const successMsg = document.getElementById('form-success');
+    if (!form || !successMsg) return;
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -280,7 +287,7 @@
     initCounters();
     initTiltCards();
     initMagneticButtons();
-    initDemoModal();
+    initTestimonialSlider();
     initContactForm();
   });
 })();

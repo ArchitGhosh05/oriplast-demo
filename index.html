@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="OriPlast — India's pioneer in PVC & PE pipes and fittings. Life Lines … not just Pipe Lines." />
-  <title>OriPlast — Engineering the Flow of Tomorrow</title>
+  <meta name="description" content="OriPlast — Premium manufacturer of PVC, CPVC, UPVC, HDPE, SWR, agriculture pipes, water tanks, and fittings." />
+  <title>OriPlast — Engineering Stronger Connections for Tomorrow</title>
   <link rel="icon" href="assets/logo.png" type="image/png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -17,42 +17,16 @@
       theme: {
         extend: {
           colors: {
-            charcoal: '#0F172A',
-            steel: '#F1F5F9',
-            slate: {
-              350: '#94A3B8',
-              450: '#64748B',
-            },
             brand: {
-              red: '#E31E24',
-              yellow: '#FACC15',
-              blue: '#2563EB',
-              sea: '#14B8A6',
-              white: '#FFFFFF',
+              blue: '#0057FF',
+              navy: '#0B1F3A',
+              light: '#F3F7FC',
+              gray: '#E9EEF5',
             },
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-          },
-          animation: {
-            'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
-            'float': 'float 6s ease-in-out infinite',
-            'flow': 'flow 8s linear infinite',
-          },
-          keyframes: {
-            'pulse-glow': {
-              '0%, 100%': { opacity: '0.4' },
-              '50%': { opacity: '0.8' },
-            },
-            'float': {
-              '0%, 100%': { transform: 'translateY(0px)' },
-              '50%': { transform: 'translateY(-12px)' },
-            },
-            'flow': {
-              '0%': { strokeDashoffset: '1000' },
-              '100%': { strokeDashoffset: '0' },
-            },
+            display: ['Poppins', 'Inter', 'sans-serif'],
           },
         },
       },
@@ -62,27 +36,29 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="antialiased overflow-x-hidden">
-
-  <!-- Glassmorphism Navbar -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 transition-all duration-500">
-    <nav class="glass-nav mx-auto max-w-7xl flex items-center justify-between px-5 py-3.5 rounded-2xl">
+    <nav class="glass-nav nav-premium mx-auto max-w-7xl flex items-center justify-between px-5 py-3.5 rounded-2xl">
       <a href="#" class="flex items-center gap-3 group">
-        <div class="brand-logo-wrap rounded-lg px-2.5 py-1.5 bg-white shadow-sm transition-transform duration-300 group-hover:scale-[1.02]">
-          <img src="assets/logo.png" alt="OriPlast — Healthy Pipes" class="brand-logo h-7 sm:h-8 w-auto object-contain" />
+        <div class="brand-logo-wrap rounded-xl px-3 py-2 bg-white transition-transform duration-300 group-hover:scale-[1.02]">
+          <img src="assets/logo.png" alt="OriPlast — Healthy Pipes" class="brand-logo h-10 sm:h-11 w-auto object-contain" />
         </div>
       </a>
 
-      <ul class="hidden md:flex items-center gap-8">
-        <li><a href="#products" class="nav-link nav-link--red">Products</a></li>
-        <li><a href="#technology" class="nav-link nav-link--blue">Technology</a></li>
-        <li><a href="#metrics" class="nav-link nav-link--sea">Impact</a></li>
-        <li><a href="#contact" class="nav-link nav-link--yellow">Contact</a></li>
+      <ul class="hidden md:flex items-center gap-7">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#industries" class="nav-link">Industries</a></li>
+        <li><a href="#infrastructure" class="nav-link">Infrastructure</a></li>
+        <li><a href="#quality" class="nav-link">Quality</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
       <div class="hidden md:block">
         <a href="#contact" class="magnetic-btn btn-primary text-sm px-5 py-2.5">
           <span class="btn-bg"></span>
-          <span class="btn-text">Get a Quote</span>
+          <span class="btn-text">Request a Quote</span>
         </a>
       </div>
 
@@ -96,17 +72,20 @@
       </button>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="glass-nav mx-auto max-w-7xl mt-2 px-5 py-4 rounded-2xl hidden md:hidden">
+    <div id="mobile-menu" class="glass-nav nav-premium mx-auto max-w-7xl mt-2 px-5 py-4 rounded-2xl hidden md:hidden">
       <ul class="flex flex-col gap-4">
-        <li><a href="#products" class="nav-link nav-link--red block py-1">Products</a></li>
-        <li><a href="#technology" class="nav-link nav-link--blue block py-1">Technology</a></li>
-        <li><a href="#metrics" class="nav-link nav-link--sea block py-1">Impact</a></li>
-        <li><a href="#contact" class="nav-link nav-link--yellow block py-1">Contact</a></li>
+        <li><a href="#home" class="nav-link block py-1">Home</a></li>
+        <li><a href="#about" class="nav-link block py-1">About Us</a></li>
+        <li><a href="#products" class="nav-link block py-1">Products</a></li>
+        <li><a href="#industries" class="nav-link block py-1">Industries</a></li>
+        <li><a href="#infrastructure" class="nav-link block py-1">Infrastructure</a></li>
+        <li><a href="#quality" class="nav-link block py-1">Quality Assurance</a></li>
+        <li><a href="#blog" class="nav-link block py-1">Blog</a></li>
+        <li><a href="#contact" class="nav-link block py-1">Contact</a></li>
         <li class="pt-2">
           <a href="#contact" class="magnetic-btn btn-primary text-sm px-5 py-2.5 w-full text-center block">
             <span class="btn-bg"></span>
-            <span class="btn-text">Get a Quote</span>
+            <span class="btn-text">Request a Quote</span>
           </a>
         </li>
       </ul>
@@ -114,557 +93,504 @@
   </header>
 
   <main id="smooth-scroll-container">
-
-    <!-- Hero Section -->
-    <section class="hero-section relative min-h-screen flex items-center pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <!-- Animated pipe motion background -->
-      <div class="hero-bg" aria-hidden="true">
-        <div class="hero-bg-mesh"></div>
-        <svg class="hero-bg-pipes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="bgPipeRed" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#E31E24" stop-opacity="0"/>
-              <stop offset="50%" stop-color="#E31E24" stop-opacity="0.35"/>
-              <stop offset="100%" stop-color="#FACC15" stop-opacity="0.2"/>
-            </linearGradient>
-            <linearGradient id="bgPipeBlue" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#2563EB" stop-opacity="0.15"/>
-              <stop offset="100%" stop-color="#14B8A6" stop-opacity="0.3"/>
-            </linearGradient>
-            <linearGradient id="bgPipeSea" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.25"/>
-              <stop offset="100%" stop-color="#2563EB" stop-opacity="0.1"/>
-            </linearGradient>
-          </defs>
-          <!-- Horizontal pipe runs -->
-          <path class="hero-pipe hero-pipe-1" d="M-40 180 H500 Q560 180 560 240 H900 Q960 240 960 300 H1500" stroke="url(#bgPipeRed)" stroke-width="14" fill="none" stroke-linecap="round"/>
-          <path class="hero-pipe hero-pipe-flow hero-pipe-1" d="M-40 180 H500 Q560 180 560 240 H900 Q960 240 960 300 H1500" stroke="url(#bgPipeRed)" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="12 18"/>
-          <path class="hero-pipe hero-pipe-2" d="M1500 420 H1100 Q1040 420 1040 360 H700 Q640 360 640 300 H-40" stroke="url(#bgPipeBlue)" stroke-width="12" fill="none" stroke-linecap="round"/>
-          <path class="hero-pipe hero-pipe-flow hero-pipe-2" d="M1500 420 H1100 Q1040 420 1040 360 H700 Q640 360 640 300 H-40" stroke="url(#bgPipeBlue)" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="10 16"/>
-          <path class="hero-pipe hero-pipe-3" d="M-40 580 H400 Q460 580 460 520 H800 Q860 520 860 460 H1500" stroke="url(#bgPipeSea)" stroke-width="10" fill="none" stroke-linecap="round"/>
-          <path class="hero-pipe hero-pipe-flow hero-pipe-3" d="M-40 580 H400 Q460 580 460 520 H800 Q860 520 860 460 H1500" stroke="url(#bgPipeSea)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="14 20"/>
-          <!-- Vertical risers -->
-          <path class="hero-pipe hero-pipe-4" d="M320 80 V750" stroke="rgba(250,204,21,0.15)" stroke-width="8" fill="none" stroke-linecap="round"/>
-          <path class="hero-pipe hero-pipe-flow hero-pipe-4" d="M320 80 V750" stroke="rgba(250,204,21,0.35)" stroke-width="2" fill="none" stroke-dasharray="8 14"/>
-          <path class="hero-pipe hero-pipe-5" d="M1080 60 V820" stroke="rgba(227,30,36,0.12)" stroke-width="8" fill="none" stroke-linecap="round"/>
-          <path class="hero-pipe hero-pipe-flow hero-pipe-5" d="M1080 60 V820" stroke="rgba(227,30,36,0.3)" stroke-width="2" fill="none" stroke-dasharray="8 14"/>
-          <!-- Junction nodes -->
-          <circle class="hero-node hero-node-1" cx="560" cy="240" r="10" fill="#E31E24" opacity="0.5"/>
-          <circle class="hero-node hero-node-2" cx="960" cy="300" r="8" fill="#2563EB" opacity="0.45"/>
-          <circle class="hero-node hero-node-3" cx="460" cy="520" r="9" fill="#14B8A6" opacity="0.45"/>
-          <circle class="hero-node hero-node-4" cx="320" cy="300" r="7" fill="#FACC15" opacity="0.5"/>
-          <circle class="hero-node hero-node-5" cx="1080" cy="420" r="8" fill="#E31E24" opacity="0.4"/>
-        </svg>
-        <div class="hero-bubbles">
+    <section id="home" class="hero-premium relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-28 pb-20">
+      <div class="hero-premium-bg" aria-hidden="true">
+        <img src="assets/hero.jpg" alt="" class="hero-premium-bg-image" />
+        <div class="hero-premium-bg-overlay"></div>
+        <div class="hero-premium-particles">
           <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
-        <div class="hero-bg-grid"></div>
+        <div class="hero-premium-shape hero-premium-shape--one"></div>
+        <div class="hero-premium-shape hero-premium-shape--two"></div>
       </div>
-      <div class="hero-bg-fade"></div>
 
-      <div class="relative z-10 mx-auto max-w-7xl w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <div class="reveal-up">
-          <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full glass-card text-sm text-body mb-8">
-            <span class="color-dots"><span></span><span></span><span></span><span></span><span></span></span>
-            Next-Gen Infrastructure Solutions
-          </div>
-
-          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.08] tracking-tight mb-6">
-            Engineering the
-            <span class="gradient-text block mt-1">Flow of Tomorrow.</span>
-          </h1>
-
-          <p class="text-lg sm:text-xl text-body leading-relaxed max-w-xl mb-10">
-            Precision-engineered piping systems built for durability, smart flow control, and sustainable infrastructure — redefining how the world moves water, gas, and energy.
-          </p>
-
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#products" class="magnetic-btn btn-primary px-8 py-3.5 text-base">
-              <span class="btn-bg"></span>
-              <span class="btn-text">Explore Catalog</span>
-            </a>
-            <button id="demo-btn" class="magnetic-btn btn-outline px-8 py-3.5 text-base">
-              <span class="btn-bg"></span>
-              <span class="btn-text flex items-center justify-center gap-2">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                Watch Demo
-              </span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Hero Visual -->
-        <div class="reveal-up delay-200 relative hero-visual-wrap mx-auto lg:mx-0 lg:ml-auto">
-          <div class="hero-visual glass-card rounded-2xl p-1 tilt-card">
-            <div class="relative rounded-[18px] overflow-hidden hero-visual-inner aspect-[4/3]">
-              <!-- Abstract pipe render -->
-              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="pipeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#E31E24" stop-opacity="0.9"/>
-                    <stop offset="50%" stop-color="#FACC15" stop-opacity="0.7"/>
-                    <stop offset="100%" stop-color="#2563EB" stop-opacity="0.6"/>
-                  </linearGradient>
-                  <linearGradient id="pipeGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.8"/>
-                    <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.4"/>
-                  </linearGradient>
-                  <linearGradient id="pipeGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#2563EB" stop-opacity="0.7"/>
-                    <stop offset="100%" stop-color="#FACC15" stop-opacity="0.5"/>
-                  </linearGradient>
-                  <filter id="glow">
-                    <feGaussianBlur stdDeviation="4" result="blur"/>
-                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                  </filter>
-                </defs>
-                <!-- Grid -->
-                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(15,23,42,0.04)" stroke-width="1"/>
-                </pattern>
-                <rect width="600" height="600" fill="url(#grid)"/>
-                <!-- Flowing pipes -->
-                <path class="flow-line" d="M-20 300 Q150 200 300 300 T620 300" stroke="url(#pipeGrad1)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="20 10"/>
-                <path class="flow-line delay-1" d="M-20 350 Q200 250 350 350 T620 350" stroke="url(#pipeGrad2)" stroke-width="2" fill="none" filter="url(#glow)" stroke-dasharray="15 8"/>
-                <path class="flow-line delay-2" d="M-20 250 Q180 350 320 250 T620 250" stroke="url(#pipeGrad3)" stroke-width="2.5" fill="none" filter="url(#glow)" stroke-dasharray="18 12"/>
-                <!-- 3D pipe segments -->
-                <ellipse cx="300" cy="300" rx="80" ry="80" stroke="url(#pipeGrad1)" stroke-width="2" fill="rgba(227,30,36,0.05)" class="animate-float"/>
-                <ellipse cx="300" cy="300" rx="50" ry="50" stroke="url(#pipeGrad2)" stroke-width="1.5" fill="rgba(20,184,166,0.06)"/>
-                <ellipse cx="300" cy="300" rx="20" ry="20" fill="url(#pipeGrad1)" opacity="0.7"/>
-                <!-- Connection nodes -->
-                <circle cx="150" cy="300" r="8" fill="#E31E24" opacity="0.9" class="animate-pulse-glow"/>
-                <circle cx="450" cy="300" r="8" fill="#2563EB" opacity="0.9" class="animate-pulse-glow"/>
-                <circle cx="300" cy="180" r="6" fill="#FACC15" opacity="0.9"/>
-                <circle cx="300" cy="420" r="6" fill="#14B8A6" opacity="0.9"/>
-                <circle cx="220" cy="220" r="5" fill="#FFFFFF" opacity="0.7"/>
-                <circle cx="380" cy="380" r="5" fill="#FFFFFF" opacity="0.7"/>
-              </svg>
-              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
-                <div class="glass-card px-2.5 py-1.5 rounded-lg text-[11px] text-body">
-                  <span class="label-red font-semibold">Live</span> · Flow Simulation
-                </div>
-                <div class="glass-card px-2.5 py-1.5 rounded-lg text-[11px] font-mono text-muted">
-                  99.9% uptime
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Floating badges -->
-          <div class="absolute -top-3 -right-3 glass-card badge-red px-3 py-2 rounded-xl text-xs font-medium animate-float hidden sm:block">
-            <span class="label-yellow font-semibold">ISO 9001</span> Certified
-          </div>
-          <div class="absolute -bottom-3 -left-3 glass-card badge-sea px-3 py-2 rounded-xl text-xs hidden sm:block">
-            <span class="font-display font-bold text-xl gradient-text-sea">5M+</span>
-            <span class="text-muted text-[10px] block">Meters Deployed</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Metrics / Impact Banner -->
-    <section id="metrics" class="section-alt py-20 px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="metrics-banner glass-card rounded-3xl p-8 sm:p-12 lg:p-16">
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-5">
-            <div class="reveal-up metric-stat metric-stat--red text-center sm:text-left">
-              <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text-red mb-2">
-                <span class="counter" data-target="99.9" data-suffix="%" data-decimals="1">0</span>
-              </div>
-              <p class="text-body text-lg">Durability Rating</p>
-              <p class="text-muted text-sm mt-1">Industry-leading material resilience</p>
-            </div>
-            <div class="reveal-up delay-100 metric-stat metric-stat--blue text-center sm:text-left">
-              <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text-blue mb-2">
-                <span class="counter" data-target="50" data-suffix="+">0</span>
-              </div>
-              <p class="text-body text-lg">Years of Innovation</p>
-              <p class="text-muted text-sm mt-1">Pioneering smart flow technology</p>
-            </div>
-            <div class="reveal-up delay-200 metric-stat metric-stat--sea text-center sm:text-left">
-              <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text-sea mb-2">
-                <span class="counter" data-target="5" data-suffix="M+">0</span>
-              </div>
-              <p class="text-body text-lg">Meters Laid</p>
-              <p class="text-muted text-sm mt-1">Across 40+ countries worldwide</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products / Services Bento Grid -->
-    <section id="products" class="section-alt py-20 px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="reveal-up text-center max-w-2xl mx-auto mb-12">
-          <p class="label-red text-sm font-semibold tracking-widest uppercase mb-4">Our Solutions</p>
-          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-            Built for Every Flow
-          </h2>
-          <p class="text-body text-lg leading-relaxed">
-            From industrial-grade pipelines to intelligent monitoring systems — engineered for performance at scale.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-          <!-- Industrial Piping -->
+      <div class="relative z-10 mx-auto max-w-7xl w-full">
+        <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
           <div class="reveal-up">
-            <div class="bento-card bento-card--red tilt-card group">
-              <div class="bento-glow"></div>
-              <div class="relative z-10 p-5">
-                <div class="icon-wrap icon-wrap--red w-10 h-10 mb-4">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                  </svg>
-                </div>
-                <h3 class="font-display text-lg font-bold mb-2">Industrial Piping</h3>
-                <p class="text-body text-sm leading-relaxed line-clamp-3">
-                  Heavy-duty HDPE and composite pipelines for extreme pressure, temperature, and chemical resistance.
-                </p>
-                <a href="#contact" class="inline-flex items-center gap-1.5 link-red text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
-                  Learn more
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Smart Flow -->
-          <div class="reveal-up delay-100">
-            <div class="bento-card bento-card--blue tilt-card group">
-              <div class="bento-glow"></div>
-              <div class="relative z-10 p-5">
-                <div class="icon-wrap icon-wrap--blue w-10 h-10 mb-4">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
-                  </svg>
-                </div>
-                <h3 class="font-display text-lg font-bold mb-2">Smart Flow Systems</h3>
-                <p class="text-body text-sm leading-relaxed line-clamp-3">
-                  IoT-enabled sensors and real-time analytics for predictive maintenance.
-                </p>
-                <a href="#contact" class="inline-flex items-center gap-1.5 link-blue text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
-                  Learn more
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Custom Fabrication -->
-          <div class="reveal-up delay-200">
-            <div class="bento-card bento-card--sea tilt-card group">
-              <div class="bento-glow"></div>
-              <div class="relative z-10 p-5">
-                <div class="icon-wrap icon-wrap--sea w-10 h-10 mb-4">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-                  </svg>
-                </div>
-                <h3 class="font-display text-lg font-bold mb-2">Custom Fabrications</h3>
-                <p class="text-body text-sm leading-relaxed line-clamp-3">
-                  Bespoke fittings and assemblies tailored to your exact specifications.
-                </p>
-                <a href="#contact" class="inline-flex items-center gap-1.5 link-sea text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
-                  Learn more
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Water Management -->
-          <div class="reveal-up delay-100">
-            <div class="bento-card bento-card--yellow tilt-card group">
-              <div class="bento-glow"></div>
-              <div class="relative z-10 p-5">
-                <div class="icon-wrap icon-wrap--yellow w-10 h-10 mb-4">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-                  </svg>
-                </div>
-                <h3 class="font-display text-lg font-bold mb-2">Water Management</h3>
-                <p class="text-body text-sm leading-relaxed line-clamp-3">
-                  Sustainable drainage and supply systems for urban infrastructure.
-                </p>
-                <a href="#contact" class="inline-flex items-center gap-1.5 link-yellow text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
-                  Learn more
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Energy Conduits -->
-          <div class="reveal-up delay-200">
-            <div class="bento-card bento-card--white tilt-card group">
-              <div class="bento-glow"></div>
-              <div class="relative z-10 p-5">
-                <div class="icon-wrap icon-wrap--white w-10 h-10 mb-4">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                  </svg>
-                </div>
-                <h3 class="font-display text-lg font-bold mb-2">Energy Conduits</h3>
-                <p class="text-body text-sm leading-relaxed line-clamp-3">
-                  High-voltage cable protection and geothermal piping solutions.
-                </p>
-                <a href="#contact" class="inline-flex items-center gap-1.5 link-blue text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
-                  Learn more
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- PVC & CPVC -->
-          <div class="reveal-up">
-            <div class="bento-card bento-card--red tilt-card group">
-              <div class="bento-glow"></div>
-              <div class="relative z-10 p-5">
-                <div class="icon-wrap icon-wrap--red w-10 h-10 mb-4">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10M12 7v10M20 7v10M2 12h20"/>
-                  </svg>
-                </div>
-                <h3 class="font-display text-lg font-bold mb-2">PVC & CPVC Pipes</h3>
-                <p class="text-body text-sm leading-relaxed line-clamp-3">
-                  Fit & forget plumbing solutions for hot and cold water supply systems.
-                </p>
-                <a href="#contact" class="inline-flex items-center gap-1.5 link-red text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
-                  Learn more
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Us / Tech Integration -->
-    <section id="technology" class="py-24 px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <!-- Visual side -->
-          <div class="reveal-up relative order-2 lg:order-1">
-            <div class="glass-card glass-card--accent rounded-3xl p-8 sm:p-10">
-              <div class="grid grid-cols-2 gap-4">
-                <div class="tech-feature-card tech-feature-card--red p-6 rounded-2xl">
-                  <div class="text-3xl mb-3">⚙️</div>
-                  <h4 class="font-display font-bold text-sm mb-1">CNC Precision</h4>
-                  <p class="text-muted text-xs">±0.01mm tolerance</p>
-                </div>
-                <div class="tech-feature-card tech-feature-card--blue p-6 rounded-2xl mt-8">
-                  <div class="text-3xl mb-3">🌿</div>
-                  <h4 class="font-display font-bold text-sm mb-1">Eco Materials</h4>
-                  <p class="text-muted text-xs">100% recyclable HDPE</p>
-                </div>
-                <div class="tech-feature-card tech-feature-card--sea p-6 rounded-2xl -mt-4">
-                  <div class="text-3xl mb-3">📡</div>
-                  <h4 class="font-display font-bold text-sm mb-1">Smart Sensors</h4>
-                  <p class="text-muted text-xs">Real-time monitoring</p>
-                </div>
-                <div class="tech-feature-card tech-feature-card--yellow p-6 rounded-2xl mt-4">
-                  <div class="text-3xl mb-3">🛡️</div>
-                  <h4 class="font-display font-bold text-sm mb-1">Stress Testing</h4>
-                  <p class="text-muted text-xs">10,000+ cycle certified</p>
-                </div>
-              </div>
-            </div>
-            <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 rounded-full blur-[80px] hero-glow-blue opacity-60"></div>
-          </div>
-
-          <!-- Content side -->
-          <div class="reveal-up delay-200 order-1 lg:order-2">
-            <p class="label-blue text-sm font-semibold tracking-widest uppercase mb-4">Why OriPlast</p>
-            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-              Where Engineering Meets Innovation
-            </h2>
-            <p class="text-body text-lg leading-relaxed mb-10">
-              We combine advanced manufacturing with sustainable materials to deliver infrastructure that lasts generations — not just decades.
+            <div class="hero-premium-badge">Premium Piping Solutions Since 1965</div>
+            <h1 class="hero-title-shimmer font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.02] tracking-tight mb-6">
+              Engineering Stronger Connections for Tomorrow
+            </h1>
+            <p class="hero-subcopy text-lg sm:text-xl leading-relaxed max-w-2xl mb-8">
+              Leading manufacturer of high-performance piping systems for residential, commercial, agricultural, and industrial applications.
             </p>
 
-            <ul class="space-y-6">
-              <li class="flex gap-4 items-start group">
-                <div class="check-icon check-icon--red">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-display font-bold mb-1">Advanced Polymer Science</h4>
-                  <p class="text-body text-sm leading-relaxed">Proprietary blend formulations delivering 3× the impact resistance of standard materials.</p>
-                </div>
-              </li>
-              <li class="flex gap-4 items-start group">
-                <div class="check-icon check-icon--blue">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-display font-bold mb-1">Digital Twin Integration</h4>
-                  <p class="text-body text-sm leading-relaxed">Every system ships with a digital twin for lifecycle tracking and predictive analytics.</p>
-                </div>
-              </li>
-              <li class="flex gap-4 items-start group">
-                <div class="check-icon check-icon--sea">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                  </svg>
-                </div>
-                <div>
-                  <h4 class="font-display font-bold mb-1">Carbon-Neutral Production</h4>
-                  <p class="text-body text-sm leading-relaxed">Zero-waste manufacturing powered by renewable energy across all facilities.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact / CTA Section -->
-    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="reveal-up contact-panel rounded-3xl overflow-hidden">
-          <div class="relative grid lg:grid-cols-2 gap-12 lg:gap-16 p-8 sm:p-12 lg:p-16">
-            <div>
-              <p class="label-sea text-sm font-semibold tracking-widest uppercase mb-4">Get Started</p>
-              <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-                Ready to Build<br/>Something Lasting?
-              </h2>
-              <p class="text-body text-lg leading-relaxed mb-8 max-w-md">
-                Tell us about your project. Our engineering team responds within 24 hours with a tailored solution.
-              </p>
-              <div class="flex flex-col gap-4 text-sm text-body">
-                <div class="flex items-center gap-3">
-                  <svg class="w-5 h-5 label-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                  </svg>
-                  contactus@oriplast.com
-                </div>
-                <div class="flex items-center gap-3">
-                  <svg class="w-5 h-5 label-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                  </svg>
-                  1800 123 2123
-                </div>
-              </div>
-            </div>
-
-            <form id="contact-form" class="space-y-5" novalidate>
-              <div class="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label for="name" class="block text-sm text-body mb-2">Full Name</label>
-                  <input type="text" id="name" name="name" required placeholder="John Smith" class="form-input" />
-                </div>
-                <div>
-                  <label for="email" class="block text-sm text-body mb-2">Email</label>
-                  <input type="email" id="email" name="email" required placeholder="john@company.com" class="form-input" />
-                </div>
-              </div>
-              <div>
-                <label for="company" class="block text-sm text-body mb-2">Company</label>
-                <input type="text" id="company" name="company" placeholder="Your Company Ltd." class="form-input" />
-              </div>
-              <div>
-                <label for="message" class="block text-sm text-body mb-2">Project Details</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your infrastructure needs..." class="form-input resize-none"></textarea>
-              </div>
-              <button type="submit" class="magnetic-btn btn-primary w-full sm:w-auto px-10 py-3.5 text-base">
+            <div class="flex flex-col sm:flex-row gap-4 mb-10">
+              <a href="#products" class="magnetic-btn btn-primary btn-primary-hero px-8 py-4 text-base">
                 <span class="btn-bg"></span>
-                <span class="btn-text">Send Inquiry</span>
-              </button>
-              <p id="form-success" class="hidden label-sea text-sm font-medium">✓ Message sent! We'll be in touch within 24 hours.</p>
-            </form>
+                <span class="btn-text">Explore Products</span>
+              </a>
+              <a href="#contact" class="magnetic-btn btn-ghost-hero px-8 py-4 text-base">
+                <span class="btn-text">Request a Quote</span>
+              </a>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="hero-metric-card reveal-up">
+                <div class="hero-metric-value"><span class="counter" data-target="25" data-suffix="+">0</span></div>
+                <div class="hero-metric-label">Years Experience</div>
+              </div>
+              <div class="hero-metric-card reveal-up delay-100">
+                <div class="hero-metric-value"><span class="counter" data-target="500" data-suffix="+">0</span></div>
+                <div class="hero-metric-label">Dealers</div>
+              </div>
+              <div class="hero-metric-card reveal-up delay-200">
+                <div class="hero-metric-value"><span class="counter" data-target="50" data-suffix="+">0</span></div>
+                <div class="hero-metric-label">Categories</div>
+              </div>
+              <div class="hero-metric-card reveal-up">
+                <div class="hero-metric-value"><span class="counter" data-target="1000" data-suffix="+">0</span></div>
+                <div class="hero-metric-label">Projects Delivered</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal-up delay-200">
+            <div class="hero-glass-panel tilt-card">
+              <div class="hero-glass-panel-top">
+                <span>Manufacturing Excellence</span>
+                <span>ISO Certified</span>
+              </div>
+              <div class="hero-glass-grid">
+                <div class="hero-mini-card">
+                  <h3>High Performance</h3>
+                  <p>PVC, CPVC, UPVC, HDPE, SWR, Tanks & Fittings.</p>
+                </div>
+                <div class="hero-mini-card hero-mini-card--accent">
+                  <h3>Modern Plants</h3>
+                  <p>Advanced extrusion, testing, and finishing lines.</p>
+                </div>
+                <div class="hero-mini-card">
+                  <h3>Nationwide Reach</h3>
+                  <p>Fast, dependable supply across distributors and projects.</p>
+                </div>
+                <div class="hero-mini-card hero-mini-card--dark">
+                  <h3>99% Satisfaction</h3>
+                  <p>Trusted quality for infrastructure and everyday plumbing.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-  </main>
+    <section class="trust-strip py-5 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl trust-strip-inner">
+        <div class="trust-pill">ISO 9001 Certified</div>
+        <div class="trust-pill">Corrosion Resistant Products</div>
+        <div class="trust-pill">Nationwide Distribution</div>
+        <div class="trust-pill">Advanced Manufacturing</div>
+        <div class="trust-pill">Premium Polymer Engineering</div>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="site-footer py-16 px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-7xl">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
-        <div class="col-span-2 md:col-span-1">
-          <a href="#" class="inline-block mb-4 group">
-            <div class="brand-logo-wrap rounded-lg px-3 py-2 bg-white shadow-sm inline-block transition-transform duration-300 group-hover:scale-[1.02]">
-              <img src="assets/logo.png" alt="OriPlast — Healthy Pipes" class="brand-logo h-8 w-auto object-contain" />
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+          <div class="reveal-up about-media-card">
+            <img src="assets/hdpe-welding.jpg" alt="Modern pipe manufacturing and joining process" class="about-media-image" />
+            <div class="about-media-badge">Built for modern infrastructure</div>
+          </div>
+
+          <div class="reveal-up delay-100">
+            <p class="section-kicker">About OriPlast</p>
+            <h2 class="section-title">A Premium Manufacturing Brand Built on Performance, Trust, and Scale</h2>
+            <p class="section-copy mb-8">
+              OriPlast delivers high-quality piping systems designed for longevity, precision, and application-specific performance. From plumbing and sewage to agriculture, industrial systems, and storage solutions, our product ecosystem is built for modern India.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-5 mb-8">
+              <div class="mission-card">
+                <h3 class="font-display text-xl font-bold mb-2">Mission</h3>
+                <p class="text-body text-sm">To deliver dependable piping solutions that combine quality, safety, and field performance.</p>
+              </div>
+              <div class="mission-card">
+                <h3 class="font-display text-xl font-bold mb-2">Vision</h3>
+                <p class="text-body text-sm">To become the most trusted premium pipe brand for infrastructure and everyday life.</p>
+              </div>
             </div>
-          </a>
-          <p class="text-muted text-sm leading-relaxed max-w-xs">
-            Life Lines … not just Pipe Lines. Trusted PVC & PE piping solutions across India since 1965.
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div class="counter-tile">
+                <div class="counter-tile-num"><span class="counter" data-target="4">0</span></div>
+                <div class="counter-tile-label">Plants</div>
+              </div>
+              <div class="counter-tile">
+                <div class="counter-tile-num"><span class="counter" data-target="500" data-suffix="+">0</span></div>
+                <div class="counter-tile-label">Distributors</div>
+              </div>
+              <div class="counter-tile">
+                <div class="counter-tile-num"><span class="counter" data-target="50" data-suffix="+">0</span></div>
+                <div class="counter-tile-label">Cities Served</div>
+              </div>
+              <div class="counter-tile">
+                <div class="counter-tile-num"><span class="counter" data-target="99" data-suffix="%">0</span></div>
+                <div class="counter-tile-label">Quality Focus</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section-soft py-24 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal-up">
+          <p class="section-kicker">Product Showcase</p>
+          <h2 class="section-title">High-Performance Product Portfolio</h2>
+          <p class="section-copy">
+            Premium hover cards designed to put products first, inspired by leading industrial brands but with a cleaner 2026 layout and stronger photography.
           </p>
         </div>
 
-        <div>
-          <h4 class="font-display font-semibold text-sm mb-4">Products</h4>
-          <ul class="space-y-3">
-            <li><a href="#products" class="footer-link">Industrial Piping</a></li>
-            <li><a href="#products" class="footer-link">Smart Flow</a></li>
-            <li><a href="#products" class="footer-link">Fabrications</a></li>
-            <li><a href="#products" class="footer-link">Water Systems</a></li>
-          </ul>
+        <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          <article class="reveal-up product-premium-card tilt-card">
+            <img src="assets/hero.jpg" alt="PVC pipes" class="product-premium-image" />
+            <div class="product-premium-body">
+              <h3 class="font-display text-xl font-bold mb-2">PVC Pipes</h3>
+              <p class="text-body text-sm mb-4">Durable flow systems for everyday water transport and infrastructure applications.</p>
+              <a href="#contact" class="product-link">Learn More</a>
+            </div>
+          </article>
+          <article class="reveal-up delay-100 product-premium-card tilt-card">
+            <img src="assets/pex-plumbing.jpg" alt="CPVC pipes" class="product-premium-image" />
+            <div class="product-premium-body">
+              <h3 class="font-display text-xl font-bold mb-2">CPVC Pipes</h3>
+              <p class="text-body text-sm mb-4">Engineered for hot and cold water plumbing with superior heat resistance.</p>
+              <a href="#contact" class="product-link">Learn More</a>
+            </div>
+          </article>
+          <article class="reveal-up delay-200 product-premium-card tilt-card">
+            <img src="assets/hero.jpg" alt="UPVC pipes" class="product-premium-image" />
+            <div class="product-premium-body">
+              <h3 class="font-display text-xl font-bold mb-2">UPVC Pipes</h3>
+              <p class="text-body text-sm mb-4">Reliable lead-free piping for potable water and commercial building networks.</p>
+              <a href="#contact" class="product-link">Learn More</a>
+            </div>
+          </article>
+          <article class="reveal-up product-premium-card tilt-card">
+            <img src="assets/hdpe-coils.jpg" alt="HDPE pipes" class="product-premium-image" />
+            <div class="product-premium-body">
+              <h3 class="font-display text-xl font-bold mb-2">HDPE Pipes</h3>
+              <p class="text-body text-sm mb-4">High-performance systems for industrial pressure handling and heavy-duty distribution.</p>
+              <a href="#contact" class="product-link">Learn More</a>
+            </div>
+          </article>
+          <article class="reveal-up delay-100 product-premium-card tilt-card">
+            <img src="assets/pex-plumbing.jpg" alt="SWR pipes" class="product-premium-image" />
+            <div class="product-premium-body">
+              <h3 class="font-display text-xl font-bold mb-2">SWR Pipes</h3>
+              <p class="text-body text-sm mb-4">Modern drainage and sewage piping built for fast installation and long service life.</p>
+              <a href="#contact" class="product-link">Learn More</a>
+            </div>
+          </article>
+          <article class="reveal-up delay-200 product-premium-card tilt-card">
+            <img src="assets/agriculture.jpg" alt="Agricultural pipes" class="product-premium-image" />
+            <div class="product-premium-body">
+              <h3 class="font-display text-xl font-bold mb-2">Agricultural Pipes</h3>
+              <p class="text-body text-sm mb-4">Weather-ready supply lines for irrigation, rural water transport, and field applications.</p>
+              <a href="#contact" class="product-link">Learn More</a>
+            </div>
+          </article>
+          <article class="reveal-up product-premium-card tilt-card">
+            <img src="assets/hdpe-welding.jpg" alt="Industrial pipes" class="product-premium-image" />
+            <div class="product-premium-body">
+              <h3 class="font-display text-xl font-bold mb-2">Industrial Pipes</h3>
+              <p class="text-body text-sm mb-4">Precision-made piping systems for industrial processing and plant operations.</p>
+              <a href="#contact" class="product-link">Learn More</a>
+            </div>
+          </article>
+          <article class="reveal-up delay-100 product-premium-card tilt-card">
+            <img src="assets/water-tank-real.jpg" alt="Water tanks" class="product-premium-image" />
+            <div class="product-premium-body">
+              <h3 class="font-display text-xl font-bold mb-2">Water Tanks</h3>
+              <p class="text-body text-sm mb-4">Multi-layer storage built for hygiene, structural integrity, and long-term outdoor use.</p>
+              <a href="#contact" class="product-link">Learn More</a>
+            </div>
+          </article>
+          <article class="reveal-up delay-200 product-premium-card tilt-card">
+            <img src="assets/pex-plumbing.jpg" alt="Pipe fittings" class="product-premium-image" />
+            <div class="product-premium-body">
+              <h3 class="font-display text-xl font-bold mb-2">Pipe Fittings</h3>
+              <p class="text-body text-sm mb-4">Application-specific fittings ensuring leak-proof connections and installation efficiency.</p>
+              <a href="#contact" class="product-link">Learn More</a>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
 
-        <div>
-          <h4 class="font-display font-semibold text-sm mb-4">Company</h4>
-          <ul class="space-y-3">
-            <li><a href="#technology" class="footer-link">About</a></li>
-            <li><a href="#technology" class="footer-link">Technology</a></li>
-            <li><a href="#metrics" class="footer-link">Impact</a></li>
-            <li><a href="#contact" class="footer-link">Careers</a></li>
-          </ul>
+    <section class="py-24 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal-up">
+          <p class="section-kicker">Why Choose Us</p>
+          <h2 class="section-title">Modern Quality Standards with a Premium Manufacturing Backbone</h2>
+          <p class="section-copy">A more luxurious corporate section with clear quality signals, large spacing, and trust-building messaging.</p>
         </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="reveal-up choice-card tilt-card"><h3>Advanced Manufacturing</h3><p>Automated process control and high-precision production lines.</p></div>
+          <div class="reveal-up delay-100 choice-card tilt-card"><h3>ISO Certified Quality</h3><p>Rigorous inspection protocols and standard-driven consistency.</p></div>
+          <div class="reveal-up delay-200 choice-card tilt-card"><h3>Nationwide Distribution</h3><p>Reliable dealer, distributor, and project delivery network.</p></div>
+          <div class="reveal-up choice-card tilt-card"><h3>Corrosion Resistant Products</h3><p>Built for long service life in harsh operating conditions.</p></div>
+          <div class="reveal-up delay-100 choice-card tilt-card"><h3>Sustainable Manufacturing</h3><p>Modern processes with smarter material use and waste reduction.</p></div>
+          <div class="reveal-up delay-200 choice-card tilt-card"><h3>Expert Technical Support</h3><p>Application guidance from planning to installation and supply.</p></div>
+        </div>
+      </div>
+    </section>
 
-        <div>
-          <h4 class="font-display font-semibold text-sm mb-4">Connect</h4>
-          <div class="flex gap-3">
-            <a href="#" class="social-icon" aria-label="LinkedIn">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="Twitter">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="#" class="social-icon" aria-label="YouTube">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-            </a>
+    <section id="industries" class="section-soft py-24 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal-up">
+          <p class="section-kicker">Industries We Serve</p>
+          <h2 class="section-title">Built for Every Major Application Environment</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="industry-card reveal-up tilt-card"><h3>Residential</h3><p>Plumbing, drainage, and water storage for homes and housing developments.</p></div>
+          <div class="industry-card reveal-up delay-100 tilt-card"><h3>Commercial</h3><p>Scalable systems for offices, retail spaces, hospitals, and institutions.</p></div>
+          <div class="industry-card reveal-up delay-200 tilt-card"><h3>Agriculture</h3><p>Irrigation, field distribution, and rural water delivery systems.</p></div>
+          <div class="industry-card reveal-up tilt-card"><h3>Infrastructure</h3><p>Large-diameter and long-run systems for public and private works.</p></div>
+          <div class="industry-card reveal-up delay-100 tilt-card"><h3>Industrial Plants</h3><p>Performance piping designed for demanding operational environments.</p></div>
+          <div class="industry-card reveal-up delay-200 tilt-card"><h3>Water Management</h3><p>Smart water movement, drainage, storage, and utility support systems.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="infrastructure" class="py-24 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-14 items-center">
+          <div class="reveal-up">
+            <p class="section-kicker">Manufacturing Excellence</p>
+            <h2 class="section-title">A Premium Visual Story of Plants, Process, and Production</h2>
+            <p class="section-copy mb-8">
+              This section mirrors the industrial confidence of top pipe brands with larger visuals, cleaner UI blocks, and stronger operational storytelling.
+            </p>
+            <div class="space-y-4">
+              <div class="timeline-row"><span>01</span><div><h3>Raw Material Selection</h3><p>High-grade polymer input sourcing with controlled quality checks.</p></div></div>
+              <div class="timeline-row"><span>02</span><div><h3>Extrusion & Forming</h3><p>Precision-driven production lines for uniform strength and dimensional accuracy.</p></div></div>
+              <div class="timeline-row"><span>03</span><div><h3>Testing & Certification</h3><p>Pressure, durability, and compliance validation before dispatch.</p></div></div>
+              <div class="timeline-row"><span>04</span><div><h3>Dispatch & Distribution</h3><p>Fast national supply support for dealers, distributors, and project requirements.</p></div></div>
+            </div>
+          </div>
+
+          <div class="reveal-up delay-100 infra-grid">
+            <div class="infra-photo-card infra-photo-card--large"><img src="assets/hdpe-welding.jpg" alt="Production line visuals" /></div>
+            <div class="infra-photo-card"><img src="assets/hdpe-coils.jpg" alt="Pipe manufacturing detail" /></div>
+            <div class="infra-photo-card"><img src="assets/hero.jpg" alt="Infrastructure pipe applications" /></div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-200">
-        <p class="text-muted text-sm">&copy; 2026 OriPlast. All rights reserved.</p>
-        <div class="flex gap-6 text-sm">
-          <a href="#" class="footer-link">Privacy</a>
-          <a href="#" class="footer-link">Terms</a>
-          <a href="#" class="footer-link">Cookies</a>
+    <section id="quality" class="quality-dark py-24 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+          <div class="reveal-up">
+            <p class="section-kicker section-kicker--light">Quality Assurance</p>
+            <h2 class="section-title section-title--light">Testing, Standards, and Certification at Every Stage</h2>
+            <p class="section-copy section-copy--light mb-8">
+              A premium dark section inspired by industrial brands, showcasing reliability through process validation, laboratory testing, and compliance-driven manufacturing.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="quality-card"><h3>Testing Laboratories</h3><p>Pressure, impact, and dimensional stability evaluation.</p></div>
+              <div class="quality-card"><h3>Quality Checks</h3><p>Batch inspections and process monitoring at every phase.</p></div>
+              <div class="quality-card"><h3>International Standards</h3><p>Products aligned with industry performance benchmarks.</p></div>
+              <div class="quality-card"><h3>Certification Ready</h3><p>Built for trust, compliance, and repeatable results.</p></div>
+            </div>
+          </div>
+          <div class="reveal-up delay-100 certification-panel">
+            <div class="cert-badge">ISO 9001</div>
+            <div class="cert-badge">Quality Lab</div>
+            <div class="cert-badge">Pressure Tested</div>
+            <div class="cert-badge">Durability Checked</div>
+            <div class="cert-badge">Supply Ready</div>
+            <div class="cert-badge">Trusted Network</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="stats-panel reveal-up">
+          <div class="stat-box">
+            <div class="stat-box-num"><span class="counter" data-target="10" data-suffix="M+">0</span></div>
+            <div class="stat-box-label">Meters Produced</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-num"><span class="counter" data-target="500" data-suffix="+">0</span></div>
+            <div class="stat-box-label">Distributors</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-num"><span class="counter" data-target="50" data-suffix="+">0</span></div>
+            <div class="stat-box-label">Cities Served</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-num"><span class="counter" data-target="99" data-suffix="%">0</span></div>
+            <div class="stat-box-label">Customer Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal-up">
+          <p class="section-kicker">Testimonials</p>
+          <h2 class="section-title">Trusted by Contractors, Dealers, and Project Teams</h2>
+        </div>
+        <div class="reveal-up testimonial-slider relative max-w-5xl mx-auto">
+          <div class="testimonial-track">
+            <div class="testimonial-slide active">
+              <div class="testimonial-card testimonial-card-premium tilt-card">
+                <div class="client-avatar">RS</div>
+                <p class="text-body text-lg leading-relaxed mb-6">OriPlast products give us dependable quality, good finish, and strong field confidence. Deliveries are consistent and support is practical.</p>
+                <div><h4 class="font-display font-bold">Rajesh Sharma</h4><p class="text-muted text-sm">Distributor, Kolkata</p></div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-card testimonial-card-premium tilt-card">
+                <div class="client-avatar">AK</div>
+                <p class="text-body text-lg leading-relaxed mb-6">Their premium presentation and product range make the brand easier to recommend across plumbing and building projects.</p>
+                <div><h4 class="font-display font-bold">Ankit Kumar</h4><p class="text-muted text-sm">Dealer, Lucknow</p></div>
+              </div>
+            </div>
+            <div class="testimonial-slide">
+              <div class="testimonial-card testimonial-card-premium tilt-card">
+                <div class="client-avatar">VP</div>
+                <p class="text-body text-lg leading-relaxed mb-6">For us, the combination of product quality, market trust, and distributor support makes OriPlast a strong long-term partner.</p>
+                <div><h4 class="font-display font-bold">Vikram Patel</h4><p class="text-muted text-sm">Project Supplier, Gujarat</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-3 mt-8">
+            <button class="testimonial-dot active" data-slide="0" aria-label="Testimonial 1"></button>
+            <button class="testimonial-dot" data-slide="1" aria-label="Testimonial 2"></button>
+            <button class="testimonial-dot" data-slide="2" aria-label="Testimonial 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="py-24 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal-up">
+          <p class="section-kicker">Blog</p>
+          <h2 class="section-title">Insights for Smarter Product Selection and Water Systems</h2>
+        </div>
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <article class="blog-card reveal-up tilt-card"><h3>Pipe Selection Guide</h3><p>How to choose the right product family for residential and project use.</p></article>
+          <article class="blog-card reveal-up delay-100 tilt-card"><h3>PVC vs CPVC</h3><p>A practical comparison of temperature tolerance, applications, and performance.</p></article>
+          <article class="blog-card reveal-up delay-200 tilt-card"><h3>Industrial Applications</h3><p>Where heavy-duty piping systems make the biggest operational difference.</p></article>
+          <article class="blog-card reveal-up tilt-card"><h3>Water Management Solutions</h3><p>Designing efficient storage, drainage, and distribution networks.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="pb-24 px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="contact-panel contact-panel-premium rounded-[2rem] overflow-hidden reveal-up">
+          <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-0">
+            <div class="contact-info-panel">
+              <p class="section-kicker section-kicker--light">Contact Us</p>
+              <h2 class="section-title section-title--light mb-6">Start Your Next Project with a Premium Manufacturing Partner</h2>
+              <div class="contact-list">
+                <div><span>Email</span><strong>contactus@oriplast.com</strong></div>
+                <div><span>Phone</span><strong>1800 123 2123</strong></div>
+                <div><span>Address</span><strong>Industrial Growth Corridor, India</strong></div>
+              </div>
+            </div>
+            <div class="contact-form-panel">
+              <form id="contact-form" class="space-y-5" novalidate>
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="name" class="block text-sm text-body mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Smith" class="form-input" />
+                  </div>
+                  <div>
+                    <label for="email" class="block text-sm text-body mb-2">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="john@company.com" class="form-input" />
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="company" class="block text-sm text-body mb-2">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Ltd." class="form-input" />
+                  </div>
+                  <div>
+                    <label for="phone" class="block text-sm text-body mb-2">Phone</label>
+                    <input type="text" id="phone" name="phone" placeholder="+91 98765 43210" class="form-input" />
+                  </div>
+                </div>
+                <div>
+                  <label for="message" class="block text-sm text-body mb-2">Project Details</label>
+                  <textarea id="message" name="message" rows="5" required placeholder="Tell us about your piping, infrastructure, or water management requirement..." class="form-input resize-none"></textarea>
+                </div>
+                <button type="submit" class="magnetic-btn btn-primary px-10 py-3.5 text-base">
+                  <span class="btn-bg"></span>
+                  <span class="btn-text">Send Inquiry</span>
+                </button>
+                <p id="form-success" class="hidden text-sm font-medium success-copy">Message sent successfully. Our team will reach out soon.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer-dark py-16 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-1">
+          <div class="brand-logo-wrap footer-logo rounded-xl px-3 py-2 bg-white inline-block mb-4">
+            <img src="assets/logo.png" alt="OriPlast logo" class="brand-logo h-10 sm:h-11 w-auto object-contain" />
+          </div>
+          <p class="footer-copy">Premium manufacturer of PVC, CPVC, UPVC, HDPE, SWR, agricultural pipes, water tanks, and pipe fittings.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-list">
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#products" class="footer-link">Products</a></li>
+            <li><a href="#industries" class="footer-link">Industries</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Categories</h4>
+          <ul class="footer-list">
+            <li><a href="#products" class="footer-link">PVC Pipes</a></li>
+            <li><a href="#products" class="footer-link">CPVC Pipes</a></li>
+            <li><a href="#products" class="footer-link">Water Tanks</a></li>
+            <li><a href="#products" class="footer-link">Pipe Fittings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Newsletter</h4>
+          <p class="footer-copy mb-4">Get product updates, industry insights, and project guidance.</p>
+          <div class="newsletter-box">
+            <input type="email" placeholder="Your email address" class="newsletter-input" />
+            <button class="newsletter-btn">Join</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 OriPlast. All rights reserved.</p>
+        <div class="social-row">
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Twitter">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="YouTube">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </footer>
-
-  <!-- Demo Modal -->
-  <div id="demo-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
-    <div class="absolute inset-0 modal-overlay backdrop-blur-sm" id="demo-overlay"></div>
-    <div class="relative glass-card rounded-3xl p-8 max-w-lg w-full text-center">
-      <button id="demo-close" class="modal-close-btn absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-lg transition-colors" aria-label="Close">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
-      <div class="w-16 h-16 rounded-2xl icon-wrap icon-wrap--red mx-auto mb-6">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-      </div>
-      <h3 class="font-display text-2xl font-bold mb-3">Product Demo</h3>
-      <p class="text-body mb-6">Experience OriPlast piping solutions in action. Full demo video coming soon.</p>
-      <button id="demo-close-btn" class="magnetic-btn btn-primary px-8 py-3">
-        <span class="btn-bg"></span>
-        <span class="btn-text">Got it</span>
-      </button>
-    </div>
-  </div>
 
   <script src="js/main.js"></script>
 </body>
