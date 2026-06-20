@@ -17,16 +17,18 @@
       theme: {
         extend: {
           colors: {
-            charcoal: '#1A1A1A',
-            steel: '#2A2A2A',
+            charcoal: '#0F172A',
+            steel: '#F1F5F9',
             slate: {
               350: '#94A3B8',
               450: '#64748B',
             },
-            accent: {
-              red: '#DC2626',
-              light: '#EF4444',
-              dark: '#991B1B',
+            brand: {
+              red: '#E31E24',
+              yellow: '#FACC15',
+              blue: '#2563EB',
+              sea: '#14B8A6',
+              white: '#FFFFFF',
             },
           },
           fontFamily: {
@@ -59,7 +61,7 @@
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="bg-charcoal text-white antialiased overflow-x-hidden">
+<body class="antialiased overflow-x-hidden">
 
   <!-- Glassmorphism Navbar -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 transition-all duration-500">
@@ -71,10 +73,10 @@
       </a>
 
       <ul class="hidden md:flex items-center gap-8">
-        <li><a href="#products" class="nav-link">Products</a></li>
-        <li><a href="#technology" class="nav-link">Technology</a></li>
-        <li><a href="#metrics" class="nav-link">Impact</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#products" class="nav-link nav-link--red">Products</a></li>
+        <li><a href="#technology" class="nav-link nav-link--blue">Technology</a></li>
+        <li><a href="#metrics" class="nav-link nav-link--sea">Impact</a></li>
+        <li><a href="#contact" class="nav-link nav-link--yellow">Contact</a></li>
       </ul>
 
       <div class="hidden md:block">
@@ -84,7 +86,7 @@
         </a>
       </div>
 
-      <button id="menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl glass-card" aria-label="Toggle menu">
+      <button id="menu-toggle" class="menu-toggle-btn md:hidden w-10 h-10 flex items-center justify-center rounded-xl glass-card" aria-label="Toggle menu">
         <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -97,10 +99,10 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="glass-nav mx-auto max-w-7xl mt-2 px-5 py-4 rounded-2xl hidden md:hidden">
       <ul class="flex flex-col gap-4">
-        <li><a href="#products" class="nav-link block py-1">Products</a></li>
-        <li><a href="#technology" class="nav-link block py-1">Technology</a></li>
-        <li><a href="#metrics" class="nav-link block py-1">Impact</a></li>
-        <li><a href="#contact" class="nav-link block py-1">Contact</a></li>
+        <li><a href="#products" class="nav-link nav-link--red block py-1">Products</a></li>
+        <li><a href="#technology" class="nav-link nav-link--blue block py-1">Technology</a></li>
+        <li><a href="#metrics" class="nav-link nav-link--sea block py-1">Impact</a></li>
+        <li><a href="#contact" class="nav-link nav-link--yellow block py-1">Contact</a></li>
         <li class="pt-2">
           <a href="#contact" class="magnetic-btn btn-primary text-sm px-5 py-2.5 w-full text-center block">
             <span class="btn-bg"></span>
@@ -114,18 +116,56 @@
   <main id="smooth-scroll-container">
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <!-- Background elements -->
-      <div class="absolute inset-0 pointer-events-none">
-        <div class="hero-glow absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-accent-red/10 blur-[120px]"></div>
-        <div class="hero-glow absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-white/5 blur-[120px]"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#1A1A1A_70%)]"></div>
+    <section class="hero-section relative min-h-screen flex items-center pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <!-- Animated pipe motion background -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg-mesh"></div>
+        <svg class="hero-bg-pipes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bgPipeRed" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#E31E24" stop-opacity="0"/>
+              <stop offset="50%" stop-color="#E31E24" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#FACC15" stop-opacity="0.2"/>
+            </linearGradient>
+            <linearGradient id="bgPipeBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#2563EB" stop-opacity="0.15"/>
+              <stop offset="100%" stop-color="#14B8A6" stop-opacity="0.3"/>
+            </linearGradient>
+            <linearGradient id="bgPipeSea" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#2563EB" stop-opacity="0.1"/>
+            </linearGradient>
+          </defs>
+          <!-- Horizontal pipe runs -->
+          <path class="hero-pipe hero-pipe-1" d="M-40 180 H500 Q560 180 560 240 H900 Q960 240 960 300 H1500" stroke="url(#bgPipeRed)" stroke-width="14" fill="none" stroke-linecap="round"/>
+          <path class="hero-pipe hero-pipe-flow hero-pipe-1" d="M-40 180 H500 Q560 180 560 240 H900 Q960 240 960 300 H1500" stroke="url(#bgPipeRed)" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="12 18"/>
+          <path class="hero-pipe hero-pipe-2" d="M1500 420 H1100 Q1040 420 1040 360 H700 Q640 360 640 300 H-40" stroke="url(#bgPipeBlue)" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path class="hero-pipe hero-pipe-flow hero-pipe-2" d="M1500 420 H1100 Q1040 420 1040 360 H700 Q640 360 640 300 H-40" stroke="url(#bgPipeBlue)" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="10 16"/>
+          <path class="hero-pipe hero-pipe-3" d="M-40 580 H400 Q460 580 460 520 H800 Q860 520 860 460 H1500" stroke="url(#bgPipeSea)" stroke-width="10" fill="none" stroke-linecap="round"/>
+          <path class="hero-pipe hero-pipe-flow hero-pipe-3" d="M-40 580 H400 Q460 580 460 520 H800 Q860 520 860 460 H1500" stroke="url(#bgPipeSea)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="14 20"/>
+          <!-- Vertical risers -->
+          <path class="hero-pipe hero-pipe-4" d="M320 80 V750" stroke="rgba(250,204,21,0.15)" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <path class="hero-pipe hero-pipe-flow hero-pipe-4" d="M320 80 V750" stroke="rgba(250,204,21,0.35)" stroke-width="2" fill="none" stroke-dasharray="8 14"/>
+          <path class="hero-pipe hero-pipe-5" d="M1080 60 V820" stroke="rgba(227,30,36,0.12)" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <path class="hero-pipe hero-pipe-flow hero-pipe-5" d="M1080 60 V820" stroke="rgba(227,30,36,0.3)" stroke-width="2" fill="none" stroke-dasharray="8 14"/>
+          <!-- Junction nodes -->
+          <circle class="hero-node hero-node-1" cx="560" cy="240" r="10" fill="#E31E24" opacity="0.5"/>
+          <circle class="hero-node hero-node-2" cx="960" cy="300" r="8" fill="#2563EB" opacity="0.45"/>
+          <circle class="hero-node hero-node-3" cx="460" cy="520" r="9" fill="#14B8A6" opacity="0.45"/>
+          <circle class="hero-node hero-node-4" cx="320" cy="300" r="7" fill="#FACC15" opacity="0.5"/>
+          <circle class="hero-node hero-node-5" cx="1080" cy="420" r="8" fill="#E31E24" opacity="0.4"/>
+        </svg>
+        <div class="hero-bubbles">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hero-bg-grid"></div>
       </div>
+      <div class="hero-bg-fade"></div>
 
-      <div class="relative mx-auto max-w-7xl w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="relative z-10 mx-auto max-w-7xl w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div class="reveal-up">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-sm text-slate-350 mb-8">
-            <span class="w-2 h-2 rounded-full bg-accent-red animate-pulse"></span>
+          <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full glass-card text-sm text-body mb-8">
+            <span class="color-dots"><span></span><span></span><span></span><span></span><span></span></span>
             Next-Gen Infrastructure Solutions
           </div>
 
@@ -134,7 +174,7 @@
             <span class="gradient-text block mt-1">Flow of Tomorrow.</span>
           </h1>
 
-          <p class="text-lg sm:text-xl text-slate-350 leading-relaxed max-w-xl mb-10">
+          <p class="text-lg sm:text-xl text-body leading-relaxed max-w-xl mb-10">
             Precision-engineered piping systems built for durability, smart flow control, and sustainable infrastructure — redefining how the world moves water, gas, and energy.
           </p>
 
@@ -154,19 +194,24 @@
         </div>
 
         <!-- Hero Visual -->
-        <div class="reveal-up delay-200 relative">
-          <div class="hero-visual glass-card rounded-3xl p-1 tilt-card">
-            <div class="relative rounded-[22px] overflow-hidden bg-steel aspect-[4/3] lg:aspect-square">
+        <div class="reveal-up delay-200 relative hero-visual-wrap mx-auto lg:mx-0 lg:ml-auto">
+          <div class="hero-visual glass-card rounded-2xl p-1 tilt-card">
+            <div class="relative rounded-[18px] overflow-hidden hero-visual-inner aspect-[4/3]">
               <!-- Abstract pipe render -->
               <svg class="absolute inset-0 w-full h-full" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="pipeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#DC2626" stop-opacity="0.9"/>
-                    <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+                    <stop offset="0%" stop-color="#E31E24" stop-opacity="0.9"/>
+                    <stop offset="50%" stop-color="#FACC15" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#2563EB" stop-opacity="0.6"/>
                   </linearGradient>
                   <linearGradient id="pipeGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5"/>
-                    <stop offset="100%" stop-color="#DC2626" stop-opacity="0.3"/>
+                    <stop offset="0%" stop-color="#14B8A6" stop-opacity="0.8"/>
+                    <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.4"/>
+                  </linearGradient>
+                  <linearGradient id="pipeGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#2563EB" stop-opacity="0.7"/>
+                    <stop offset="100%" stop-color="#FACC15" stop-opacity="0.5"/>
                   </linearGradient>
                   <filter id="glow">
                     <feGaussianBlur stdDeviation="4" result="blur"/>
@@ -175,70 +220,72 @@
                 </defs>
                 <!-- Grid -->
                 <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(15,23,42,0.04)" stroke-width="1"/>
                 </pattern>
                 <rect width="600" height="600" fill="url(#grid)"/>
                 <!-- Flowing pipes -->
                 <path class="flow-line" d="M-20 300 Q150 200 300 300 T620 300" stroke="url(#pipeGrad1)" stroke-width="3" fill="none" filter="url(#glow)" stroke-dasharray="20 10"/>
                 <path class="flow-line delay-1" d="M-20 350 Q200 250 350 350 T620 350" stroke="url(#pipeGrad2)" stroke-width="2" fill="none" filter="url(#glow)" stroke-dasharray="15 8"/>
-                <path class="flow-line delay-2" d="M-20 250 Q180 350 320 250 T620 250" stroke="url(#pipeGrad1)" stroke-width="2.5" fill="none" filter="url(#glow)" stroke-dasharray="18 12"/>
+                <path class="flow-line delay-2" d="M-20 250 Q180 350 320 250 T620 250" stroke="url(#pipeGrad3)" stroke-width="2.5" fill="none" filter="url(#glow)" stroke-dasharray="18 12"/>
                 <!-- 3D pipe segments -->
-                <ellipse cx="300" cy="300" rx="80" ry="80" stroke="url(#pipeGrad1)" stroke-width="2" fill="rgba(220,38,38,0.06)" class="animate-float"/>
-                <ellipse cx="300" cy="300" rx="50" ry="50" stroke="url(#pipeGrad2)" stroke-width="1.5" fill="rgba(255,255,255,0.06)"/>
-                <ellipse cx="300" cy="300" rx="20" ry="20" fill="url(#pipeGrad1)" opacity="0.6"/>
+                <ellipse cx="300" cy="300" rx="80" ry="80" stroke="url(#pipeGrad1)" stroke-width="2" fill="rgba(227,30,36,0.05)" class="animate-float"/>
+                <ellipse cx="300" cy="300" rx="50" ry="50" stroke="url(#pipeGrad2)" stroke-width="1.5" fill="rgba(20,184,166,0.06)"/>
+                <ellipse cx="300" cy="300" rx="20" ry="20" fill="url(#pipeGrad1)" opacity="0.7"/>
                 <!-- Connection nodes -->
-                <circle cx="150" cy="300" r="8" fill="#FFFFFF" opacity="0.8" class="animate-pulse-glow"/>
-                <circle cx="450" cy="300" r="8" fill="#DC2626" opacity="0.9" class="animate-pulse-glow"/>
-                <circle cx="300" cy="180" r="6" fill="#FFFFFF" opacity="0.6"/>
-                <circle cx="300" cy="420" r="6" fill="#DC2626" opacity="0.7"/>
+                <circle cx="150" cy="300" r="8" fill="#E31E24" opacity="0.9" class="animate-pulse-glow"/>
+                <circle cx="450" cy="300" r="8" fill="#2563EB" opacity="0.9" class="animate-pulse-glow"/>
+                <circle cx="300" cy="180" r="6" fill="#FACC15" opacity="0.9"/>
+                <circle cx="300" cy="420" r="6" fill="#14B8A6" opacity="0.9"/>
+                <circle cx="220" cy="220" r="5" fill="#FFFFFF" opacity="0.7"/>
+                <circle cx="380" cy="380" r="5" fill="#FFFFFF" opacity="0.7"/>
               </svg>
-              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
-                <div class="glass-card px-3 py-2 rounded-xl text-xs text-slate-350">
-                  <span class="text-accent-red font-semibold">Live</span> · Flow Simulation
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between gap-2">
+                <div class="glass-card px-2.5 py-1.5 rounded-lg text-[11px] text-body">
+                  <span class="label-red font-semibold">Live</span> · Flow Simulation
                 </div>
-                <div class="glass-card px-3 py-2 rounded-xl text-xs font-mono text-slate-350">
+                <div class="glass-card px-2.5 py-1.5 rounded-lg text-[11px] font-mono text-muted">
                   99.9% uptime
                 </div>
               </div>
             </div>
           </div>
           <!-- Floating badges -->
-          <div class="absolute -top-4 -right-4 glass-card px-4 py-3 rounded-2xl text-sm font-medium animate-float hidden sm:block">
-            <span class="text-accent-red">ISO 9001</span> Certified
+          <div class="absolute -top-3 -right-3 glass-card badge-red px-3 py-2 rounded-xl text-xs font-medium animate-float hidden sm:block">
+            <span class="label-yellow font-semibold">ISO 9001</span> Certified
           </div>
-          <div class="absolute -bottom-4 -left-4 glass-card px-4 py-3 rounded-2xl text-sm hidden sm:block">
-            <span class="font-display font-bold text-2xl text-white">5M+</span>
-            <span class="text-slate-350 text-xs block">Meters Deployed</span>
+          <div class="absolute -bottom-3 -left-3 glass-card badge-sea px-3 py-2 rounded-xl text-xs hidden sm:block">
+            <span class="font-display font-bold text-xl gradient-text-sea">5M+</span>
+            <span class="text-muted text-[10px] block">Meters Deployed</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Metrics / Impact Banner -->
-    <section id="metrics" class="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="metrics" class="section-alt py-20 px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-7xl">
-        <div class="glass-card rounded-3xl p-8 sm:p-12 lg:p-16">
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
-            <div class="reveal-up text-center sm:text-left">
-              <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text mb-2">
+        <div class="metrics-banner glass-card rounded-3xl p-8 sm:p-12 lg:p-16">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-5">
+            <div class="reveal-up metric-stat metric-stat--red text-center sm:text-left">
+              <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text-red mb-2">
                 <span class="counter" data-target="99.9" data-suffix="%" data-decimals="1">0</span>
               </div>
-              <p class="text-slate-350 text-lg">Durability Rating</p>
-              <p class="text-slate-450 text-sm mt-1">Industry-leading material resilience</p>
+              <p class="text-body text-lg">Durability Rating</p>
+              <p class="text-muted text-sm mt-1">Industry-leading material resilience</p>
             </div>
-            <div class="reveal-up delay-100 text-center sm:text-left sm:border-x border-white/5 sm:px-8">
-              <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text mb-2">
-                <span class="counter" data-target="20" data-suffix="+">0</span>
+            <div class="reveal-up delay-100 metric-stat metric-stat--blue text-center sm:text-left">
+              <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text-blue mb-2">
+                <span class="counter" data-target="50" data-suffix="+">0</span>
               </div>
-              <p class="text-slate-350 text-lg">Years of Innovation</p>
-              <p class="text-slate-450 text-sm mt-1">Pioneering smart flow technology</p>
+              <p class="text-body text-lg">Years of Innovation</p>
+              <p class="text-muted text-sm mt-1">Pioneering smart flow technology</p>
             </div>
-            <div class="reveal-up delay-200 text-center sm:text-left">
-              <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text mb-2">
+            <div class="reveal-up delay-200 metric-stat metric-stat--sea text-center sm:text-left">
+              <div class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold gradient-text-sea mb-2">
                 <span class="counter" data-target="5" data-suffix="M+">0</span>
               </div>
-              <p class="text-slate-350 text-lg">Meters Laid</p>
-              <p class="text-slate-450 text-sm mt-1">Across 40+ countries worldwide</p>
+              <p class="text-body text-lg">Meters Laid</p>
+              <p class="text-muted text-sm mt-1">Across 40+ countries worldwide</p>
             </div>
           </div>
         </div>
@@ -246,38 +293,36 @@
     </section>
 
     <!-- Products / Services Bento Grid -->
-    <section id="products" class="py-24 px-4 sm:px-6 lg:px-8">
+    <section id="products" class="section-alt py-20 px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-7xl">
-        <div class="reveal-up text-center max-w-2xl mx-auto mb-16">
-          <p class="text-accent-red text-sm font-semibold tracking-widest uppercase mb-4">Our Solutions</p>
+        <div class="reveal-up text-center max-w-2xl mx-auto mb-12">
+          <p class="label-red text-sm font-semibold tracking-widest uppercase mb-4">Our Solutions</p>
           <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             Built for Every Flow
           </h2>
-          <p class="text-slate-350 text-lg leading-relaxed">
+          <p class="text-body text-lg leading-relaxed">
             From industrial-grade pipelines to intelligent monitoring systems — engineered for performance at scale.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 auto-rows-fr">
-          <!-- Large card -->
-          <div class="reveal-up lg:col-span-2 lg:row-span-2">
-            <div class="bento-card tilt-card h-full min-h-[320px] group">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          <!-- Industrial Piping -->
+          <div class="reveal-up">
+            <div class="bento-card bento-card--red tilt-card group">
               <div class="bento-glow"></div>
-              <div class="relative z-10 p-8 sm:p-10 h-full flex flex-col justify-between">
-                <div>
-                  <div class="w-12 h-12 rounded-2xl bg-accent-red/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                    <svg class="w-6 h-6 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                    </svg>
-                  </div>
-                  <h3 class="font-display text-2xl sm:text-3xl font-bold mb-3">Industrial Piping</h3>
-                  <p class="text-slate-350 leading-relaxed max-w-md">
-                    Heavy-duty HDPE and composite pipelines designed for extreme pressure, temperature, and chemical resistance across municipal and industrial applications.
-                  </p>
+              <div class="relative z-10 p-5">
+                <div class="icon-wrap icon-wrap--red w-10 h-10 mb-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                  </svg>
                 </div>
-                <a href="#contact" class="inline-flex items-center gap-2 text-accent-red font-medium mt-6 group-hover:gap-3 transition-all duration-300">
+                <h3 class="font-display text-lg font-bold mb-2">Industrial Piping</h3>
+                <p class="text-body text-sm leading-relaxed line-clamp-3">
+                  Heavy-duty HDPE and composite pipelines for extreme pressure, temperature, and chemical resistance.
+                </p>
+                <a href="#contact" class="inline-flex items-center gap-1.5 link-red text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
                   Learn more
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
               </div>
             </div>
@@ -285,68 +330,110 @@
 
           <!-- Smart Flow -->
           <div class="reveal-up delay-100">
-            <div class="bento-card tilt-card h-full min-h-[240px] group">
+            <div class="bento-card bento-card--blue tilt-card group">
               <div class="bento-glow"></div>
-              <div class="relative z-10 p-8 h-full flex flex-col justify-between">
-                <div>
-                  <div class="w-12 h-12 rounded-2xl bg-accent-red/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                    <svg class="w-6 h-6 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
-                    </svg>
-                  </div>
-                  <h3 class="font-display text-xl font-bold mb-2">Smart Flow Systems</h3>
-                  <p class="text-slate-350 text-sm leading-relaxed">IoT-enabled sensors and real-time analytics for predictive maintenance.</p>
+              <div class="relative z-10 p-5">
+                <div class="icon-wrap icon-wrap--blue w-10 h-10 mb-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                  </svg>
                 </div>
+                <h3 class="font-display text-lg font-bold mb-2">Smart Flow Systems</h3>
+                <p class="text-body text-sm leading-relaxed line-clamp-3">
+                  IoT-enabled sensors and real-time analytics for predictive maintenance.
+                </p>
+                <a href="#contact" class="inline-flex items-center gap-1.5 link-blue text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
+                  Learn more
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
               </div>
             </div>
           </div>
 
           <!-- Custom Fabrication -->
           <div class="reveal-up delay-200">
-            <div class="bento-card tilt-card h-full min-h-[240px] group">
+            <div class="bento-card bento-card--sea tilt-card group">
               <div class="bento-glow"></div>
-              <div class="relative z-10 p-8 h-full flex flex-col justify-between">
-                <div>
-                  <div class="w-12 h-12 rounded-2xl bg-accent-red/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                    <svg class="w-6 h-6 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-                    </svg>
-                  </div>
-                  <h3 class="font-display text-xl font-bold mb-2">Custom Fabrications</h3>
-                  <p class="text-slate-350 text-sm leading-relaxed">Bespoke fittings and assemblies tailored to your exact specifications.</p>
+              <div class="relative z-10 p-5">
+                <div class="icon-wrap icon-wrap--sea w-10 h-10 mb-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+                  </svg>
                 </div>
+                <h3 class="font-display text-lg font-bold mb-2">Custom Fabrications</h3>
+                <p class="text-body text-sm leading-relaxed line-clamp-3">
+                  Bespoke fittings and assemblies tailored to your exact specifications.
+                </p>
+                <a href="#contact" class="inline-flex items-center gap-1.5 link-sea text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
+                  Learn more
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
               </div>
             </div>
           </div>
 
           <!-- Water Management -->
           <div class="reveal-up delay-100">
-            <div class="bento-card tilt-card h-full min-h-[200px] group">
+            <div class="bento-card bento-card--yellow tilt-card group">
               <div class="bento-glow"></div>
-              <div class="relative z-10 p-8">
-                <div class="w-12 h-12 rounded-2xl bg-accent-red/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                  <svg class="w-6 h-6 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="relative z-10 p-5">
+                <div class="icon-wrap icon-wrap--yellow w-10 h-10 mb-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
                   </svg>
                 </div>
-                <h3 class="font-display text-xl font-bold mb-2">Water Management</h3>
-                <p class="text-slate-350 text-sm leading-relaxed">Sustainable drainage and supply systems for urban infrastructure.</p>
+                <h3 class="font-display text-lg font-bold mb-2">Water Management</h3>
+                <p class="text-body text-sm leading-relaxed line-clamp-3">
+                  Sustainable drainage and supply systems for urban infrastructure.
+                </p>
+                <a href="#contact" class="inline-flex items-center gap-1.5 link-yellow text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
+                  Learn more
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
               </div>
             </div>
           </div>
 
           <!-- Energy Conduits -->
           <div class="reveal-up delay-200">
-            <div class="bento-card tilt-card h-full min-h-[200px] group">
+            <div class="bento-card bento-card--white tilt-card group">
               <div class="bento-glow"></div>
-              <div class="relative z-10 p-8">
-                <div class="w-12 h-12 rounded-2xl bg-accent-red/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                  <svg class="w-6 h-6 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div class="relative z-10 p-5">
+                <div class="icon-wrap icon-wrap--white w-10 h-10 mb-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                   </svg>
                 </div>
-                <h3 class="font-display text-xl font-bold mb-2">Energy Conduits</h3>
-                <p class="text-slate-350 text-sm leading-relaxed">High-voltage cable protection and geothermal piping solutions.</p>
+                <h3 class="font-display text-lg font-bold mb-2">Energy Conduits</h3>
+                <p class="text-body text-sm leading-relaxed line-clamp-3">
+                  High-voltage cable protection and geothermal piping solutions.
+                </p>
+                <a href="#contact" class="inline-flex items-center gap-1.5 link-blue text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
+                  Learn more
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PVC & CPVC -->
+          <div class="reveal-up">
+            <div class="bento-card bento-card--red tilt-card group">
+              <div class="bento-glow"></div>
+              <div class="relative z-10 p-5">
+                <div class="icon-wrap icon-wrap--red w-10 h-10 mb-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10M12 7v10M20 7v10M2 12h20"/>
+                  </svg>
+                </div>
+                <h3 class="font-display text-lg font-bold mb-2">PVC & CPVC Pipes</h3>
+                <p class="text-body text-sm leading-relaxed line-clamp-3">
+                  Fit & forget plumbing solutions for hot and cold water supply systems.
+                </p>
+                <a href="#contact" class="inline-flex items-center gap-1.5 link-red text-sm font-semibold mt-4 group-hover:gap-2.5 transition-all duration-300">
+                  Learn more
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
               </div>
             </div>
           </div>
@@ -360,75 +447,75 @@
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <!-- Visual side -->
           <div class="reveal-up relative order-2 lg:order-1">
-            <div class="glass-card rounded-3xl p-8 sm:p-10">
+            <div class="glass-card glass-card--accent rounded-3xl p-8 sm:p-10">
               <div class="grid grid-cols-2 gap-4">
-                <div class="tech-feature-card p-6 rounded-2xl">
+                <div class="tech-feature-card tech-feature-card--red p-6 rounded-2xl">
                   <div class="text-3xl mb-3">⚙️</div>
                   <h4 class="font-display font-bold text-sm mb-1">CNC Precision</h4>
-                  <p class="text-slate-450 text-xs">±0.01mm tolerance</p>
+                  <p class="text-muted text-xs">±0.01mm tolerance</p>
                 </div>
-                <div class="tech-feature-card p-6 rounded-2xl mt-8">
+                <div class="tech-feature-card tech-feature-card--blue p-6 rounded-2xl mt-8">
                   <div class="text-3xl mb-3">🌿</div>
                   <h4 class="font-display font-bold text-sm mb-1">Eco Materials</h4>
-                  <p class="text-slate-450 text-xs">100% recyclable HDPE</p>
+                  <p class="text-muted text-xs">100% recyclable HDPE</p>
                 </div>
-                <div class="tech-feature-card p-6 rounded-2xl -mt-4">
+                <div class="tech-feature-card tech-feature-card--sea p-6 rounded-2xl -mt-4">
                   <div class="text-3xl mb-3">📡</div>
                   <h4 class="font-display font-bold text-sm mb-1">Smart Sensors</h4>
-                  <p class="text-slate-450 text-xs">Real-time monitoring</p>
+                  <p class="text-muted text-xs">Real-time monitoring</p>
                 </div>
-                <div class="tech-feature-card p-6 rounded-2xl mt-4">
+                <div class="tech-feature-card tech-feature-card--yellow p-6 rounded-2xl mt-4">
                   <div class="text-3xl mb-3">🛡️</div>
                   <h4 class="font-display font-bold text-sm mb-1">Stress Testing</h4>
-                  <p class="text-slate-450 text-xs">10,000+ cycle certified</p>
+                  <p class="text-muted text-xs">10,000+ cycle certified</p>
                 </div>
               </div>
             </div>
-            <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-accent-red/5 rounded-full blur-[80px]"></div>
+            <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 rounded-full blur-[80px] hero-glow-blue opacity-60"></div>
           </div>
 
           <!-- Content side -->
           <div class="reveal-up delay-200 order-1 lg:order-2">
-            <p class="text-accent-red text-sm font-semibold tracking-widest uppercase mb-4">Why OriPlast</p>
+            <p class="label-blue text-sm font-semibold tracking-widest uppercase mb-4">Why OriPlast</p>
             <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
               Where Engineering Meets Innovation
             </h2>
-            <p class="text-slate-350 text-lg leading-relaxed mb-10">
+            <p class="text-body text-lg leading-relaxed mb-10">
               We combine advanced manufacturing with sustainable materials to deliver infrastructure that lasts generations — not just decades.
             </p>
 
             <ul class="space-y-6">
               <li class="flex gap-4 items-start group">
-                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-accent-red/10 flex items-center justify-center group-hover:bg-accent-red/20 transition-colors duration-300">
-                  <svg class="w-5 h-5 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="check-icon check-icon--red">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
                 </div>
                 <div>
                   <h4 class="font-display font-bold mb-1">Advanced Polymer Science</h4>
-                  <p class="text-slate-350 text-sm leading-relaxed">Proprietary blend formulations delivering 3× the impact resistance of standard materials.</p>
+                  <p class="text-body text-sm leading-relaxed">Proprietary blend formulations delivering 3× the impact resistance of standard materials.</p>
                 </div>
               </li>
               <li class="flex gap-4 items-start group">
-                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-accent-red/10 flex items-center justify-center group-hover:bg-accent-red/20 transition-colors duration-300">
-                  <svg class="w-5 h-5 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="check-icon check-icon--blue">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
                 </div>
                 <div>
                   <h4 class="font-display font-bold mb-1">Digital Twin Integration</h4>
-                  <p class="text-slate-350 text-sm leading-relaxed">Every system ships with a digital twin for lifecycle tracking and predictive analytics.</p>
+                  <p class="text-body text-sm leading-relaxed">Every system ships with a digital twin for lifecycle tracking and predictive analytics.</p>
                 </div>
               </li>
               <li class="flex gap-4 items-start group">
-                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-accent-red/10 flex items-center justify-center group-hover:bg-accent-red/20 transition-colors duration-300">
-                  <svg class="w-5 h-5 text-accent-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="check-icon check-icon--sea">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                   </svg>
                 </div>
                 <div>
                   <h4 class="font-display font-bold mb-1">Carbon-Neutral Production</h4>
-                  <p class="text-slate-350 text-sm leading-relaxed">Zero-waste manufacturing powered by renewable energy across all facilities.</p>
+                  <p class="text-body text-sm leading-relaxed">Zero-waste manufacturing powered by renewable energy across all facilities.</p>
                 </div>
               </li>
             </ul>
@@ -440,29 +527,25 @@
     <!-- Contact / CTA Section -->
     <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-7xl">
-        <div class="reveal-up relative rounded-3xl overflow-hidden">
-          <div class="absolute inset-0 bg-gradient-to-br from-steel via-charcoal to-charcoal"></div>
-          <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(220,38,38,0.18),transparent_60%)]"></div>
-          <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(255,255,255,0.04),transparent_60%)]"></div>
-
+        <div class="reveal-up contact-panel rounded-3xl overflow-hidden">
           <div class="relative grid lg:grid-cols-2 gap-12 lg:gap-16 p-8 sm:p-12 lg:p-16">
             <div>
-              <p class="text-accent-red text-sm font-semibold tracking-widest uppercase mb-4">Get Started</p>
+              <p class="label-sea text-sm font-semibold tracking-widest uppercase mb-4">Get Started</p>
               <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
                 Ready to Build<br/>Something Lasting?
               </h2>
-              <p class="text-slate-350 text-lg leading-relaxed mb-8 max-w-md">
+              <p class="text-body text-lg leading-relaxed mb-8 max-w-md">
                 Tell us about your project. Our engineering team responds within 24 hours with a tailored solution.
               </p>
-              <div class="flex flex-col gap-4 text-sm text-slate-350">
+              <div class="flex flex-col gap-4 text-sm text-body">
                 <div class="flex items-center gap-3">
-                  <svg class="w-5 h-5 text-accent-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-5 h-5 label-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                   contactus@oriplast.com
                 </div>
                 <div class="flex items-center gap-3">
-                  <svg class="w-5 h-5 text-accent-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-5 h-5 label-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                   </svg>
                   1800 123 2123
@@ -473,27 +556,27 @@
             <form id="contact-form" class="space-y-5" novalidate>
               <div class="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label for="name" class="block text-sm text-slate-350 mb-2">Full Name</label>
+                  <label for="name" class="block text-sm text-body mb-2">Full Name</label>
                   <input type="text" id="name" name="name" required placeholder="John Smith" class="form-input" />
                 </div>
                 <div>
-                  <label for="email" class="block text-sm text-slate-350 mb-2">Email</label>
+                  <label for="email" class="block text-sm text-body mb-2">Email</label>
                   <input type="email" id="email" name="email" required placeholder="john@company.com" class="form-input" />
                 </div>
               </div>
               <div>
-                <label for="company" class="block text-sm text-slate-350 mb-2">Company</label>
+                <label for="company" class="block text-sm text-body mb-2">Company</label>
                 <input type="text" id="company" name="company" placeholder="Your Company Ltd." class="form-input" />
               </div>
               <div>
-                <label for="message" class="block text-sm text-slate-350 mb-2">Project Details</label>
+                <label for="message" class="block text-sm text-body mb-2">Project Details</label>
                 <textarea id="message" name="message" rows="4" required placeholder="Tell us about your infrastructure needs..." class="form-input resize-none"></textarea>
               </div>
               <button type="submit" class="magnetic-btn btn-primary w-full sm:w-auto px-10 py-3.5 text-base">
                 <span class="btn-bg"></span>
                 <span class="btn-text">Send Inquiry</span>
               </button>
-              <p id="form-success" class="hidden text-accent-red text-sm font-medium">✓ Message sent! We'll be in touch within 24 hours.</p>
+              <p id="form-success" class="hidden label-sea text-sm font-medium">✓ Message sent! We'll be in touch within 24 hours.</p>
             </form>
           </div>
         </div>
@@ -503,7 +586,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-white/5 py-16 px-4 sm:px-6 lg:px-8">
+  <footer class="site-footer py-16 px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-7xl">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
         <div class="col-span-2 md:col-span-1">
@@ -512,7 +595,7 @@
               <img src="assets/logo.png" alt="OriPlast — Healthy Pipes" class="brand-logo h-8 w-auto object-contain" />
             </div>
           </a>
-          <p class="text-slate-450 text-sm leading-relaxed max-w-xs">
+          <p class="text-muted text-sm leading-relaxed max-w-xs">
             Life Lines … not just Pipe Lines. Trusted PVC & PE piping solutions across India since 1965.
           </p>
         </div>
@@ -553,8 +636,8 @@
         </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-white/5">
-        <p class="text-slate-450 text-sm">&copy; 2026 OriPlast. All rights reserved.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-gray-200">
+        <p class="text-muted text-sm">&copy; 2026 OriPlast. All rights reserved.</p>
         <div class="flex gap-6 text-sm">
           <a href="#" class="footer-link">Privacy</a>
           <a href="#" class="footer-link">Terms</a>
@@ -566,16 +649,16 @@
 
   <!-- Demo Modal -->
   <div id="demo-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
-    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="demo-overlay"></div>
+    <div class="absolute inset-0 modal-overlay backdrop-blur-sm" id="demo-overlay"></div>
     <div class="relative glass-card rounded-3xl p-8 max-w-lg w-full text-center">
-      <button id="demo-close" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors" aria-label="Close">
+      <button id="demo-close" class="modal-close-btn absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-lg transition-colors" aria-label="Close">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
-      <div class="w-16 h-16 rounded-2xl bg-accent-red/10 flex items-center justify-center mx-auto mb-6">
-        <svg class="w-8 h-8 text-accent-red" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <div class="w-16 h-16 rounded-2xl icon-wrap icon-wrap--red mx-auto mb-6">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
       </div>
       <h3 class="font-display text-2xl font-bold mb-3">Product Demo</h3>
-      <p class="text-slate-350 mb-6">Experience OriPlast piping solutions in action. Full demo video coming soon.</p>
+      <p class="text-body mb-6">Experience OriPlast piping solutions in action. Full demo video coming soon.</p>
       <button id="demo-close-btn" class="magnetic-btn btn-primary px-8 py-3">
         <span class="btn-bg"></span>
         <span class="btn-text">Got it</span>
