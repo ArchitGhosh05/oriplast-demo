@@ -93,50 +93,76 @@
   </header>
 
   <main id="smooth-scroll-container">
-    <section id="home" class="hero-premium relative min-h-screen flex items-center overflow-hidden px-4 sm:px-6 lg:px-8 pt-28 pb-20">
-      <div class="hero-premium-bg" aria-hidden="true">
-        <img src="assets/hero.jpeg" alt="" class="hero-premium-bg-image" />
-        <div class="hero-premium-bg-overlay"></div>
+    <section id="home" class="hero-v2">
+      <div class="hero-v2-bg" aria-hidden="true">
+        <div class="hero-v2-grid-pattern"></div>
+        <div class="hero-v2-glow"></div>
       </div>
 
-      <div class="relative z-10 mx-auto max-w-7xl w-full">
-        <div class="max-w-2xl">
-          <div class="reveal-up">
-            <div class="hero-premium-badge">Premium Piping Solutions Since 1965</div>
-            <h1 class="hero-title-shimmer font-display text-lg sm:text-xl lg:text-2xl xl:text-3xl font-extrabold leading-[1.08] tracking-tight mb-4">
-              Engineering Stronger Connections for Tomorrow
-            </h1>
-            <p class="hero-subcopy text-sm sm:text-base leading-relaxed max-w-lg mb-5">
-              Leading manufacturer of high-performance piping systems for residential, commercial, agricultural, and industrial applications.
-            </p>
+      <div class="hero-v2-inner mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8">
+        <div class="hero-v2-content reveal-up">
+          <div class="hero-v2-eyebrow">
+            <span class="hero-v2-eyebrow-dot"></span>
+            Premium Piping Solutions Since 1965
+          </div>
 
-            <div class="flex flex-col sm:flex-row gap-3 mb-7">
-              <a href="#products" class="magnetic-btn btn-primary btn-primary-hero px-6 py-3 text-sm">
-                <span class="btn-bg"></span>
-                <span class="btn-text">Explore Products</span>
-              </a>
-              <a href="#contact" class="magnetic-btn btn-ghost-hero px-6 py-3 text-sm">
-                <span class="btn-text">Request a Quote</span>
-              </a>
+          <h1 class="hero-v2-title font-display">
+            Engineering Stronger
+            <span class="hero-v2-title-accent">Connections</span>
+            for Tomorrow
+          </h1>
+
+          <p class="hero-v2-desc">
+            Leading manufacturer of PVC, CPVC, HDPE, and SWR piping systems for residential, commercial, agricultural, and industrial applications across India.
+          </p>
+
+          <div class="hero-v2-actions">
+            <a href="#products" class="magnetic-btn btn-primary px-7 py-3.5 text-sm">
+              <span class="btn-bg"></span>
+              <span class="btn-text">Explore Products</span>
+            </a>
+            <a href="#contact" class="magnetic-btn btn-ghost-v2 px-7 py-3.5 text-sm">
+              <span class="btn-text">Request a Quote</span>
+            </a>
+          </div>
+
+          <div class="hero-v2-stats">
+            <div class="hero-v2-stat">
+              <span class="hero-v2-stat-num"><span class="counter" data-target="60" data-suffix="+">0</span></span>
+              <span class="hero-v2-stat-label">Years Experience</span>
             </div>
+            <div class="hero-v2-stat-divider"></div>
+            <div class="hero-v2-stat">
+              <span class="hero-v2-stat-num"><span class="counter" data-target="500" data-suffix="+">0</span></span>
+              <span class="hero-v2-stat-label">Dealers</span>
+            </div>
+            <div class="hero-v2-stat-divider"></div>
+            <div class="hero-v2-stat">
+              <span class="hero-v2-stat-num"><span class="counter" data-target="50" data-suffix="+">0</span></span>
+              <span class="hero-v2-stat-label">Product Lines</span>
+            </div>
+            <div class="hero-v2-stat-divider"></div>
+            <div class="hero-v2-stat">
+              <span class="hero-v2-stat-num"><span class="counter" data-target="4">0</span></span>
+              <span class="hero-v2-stat-label">Plants</span>
+            </div>
+          </div>
+        </div>
 
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-lg">
-              <div class="hero-metric-card reveal-up">
-                <div class="hero-metric-value"><span class="counter" data-target="25" data-suffix="+">0</span></div>
-                <div class="hero-metric-label">Years Experience</div>
-              </div>
-              <div class="hero-metric-card reveal-up delay-100">
-                <div class="hero-metric-value"><span class="counter" data-target="500" data-suffix="+">0</span></div>
-                <div class="hero-metric-label">Dealers</div>
-              </div>
-              <div class="hero-metric-card reveal-up delay-200">
-                <div class="hero-metric-value"><span class="counter" data-target="50" data-suffix="+">0</span></div>
-                <div class="hero-metric-label">Categories</div>
-              </div>
-              <div class="hero-metric-card reveal-up">
-                <div class="hero-metric-value"><span class="counter" data-target="1000" data-suffix="+">0</span></div>
-                <div class="hero-metric-label">Projects Delivered</div>
-              </div>
+        <div class="hero-v2-visual reveal-up delay-100">
+          <div class="hero-v2-frame hero-v2-frame--main">
+            <img src="assets/orihero.jpeg" alt="OriPlast product range — pipes, tanks, and fittings" class="hero-v2-img hero-v2-img--orihero" />
+          </div>
+          <div class="hero-v2-frame hero-v2-frame--secondary">
+            <img src="assets/upvc.jfif" alt="OriPlast UPVC pipes and fittings" class="hero-v2-img hero-v2-img--product" />
+          </div>
+          <div class="hero-v2-cert">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            <div>
+              <strong>ISO 9001</strong>
+              <span>Certified Quality</span>
             </div>
           </div>
         </div>
