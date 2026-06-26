@@ -353,10 +353,10 @@ body {
 
 .hero-v2-frame--secondary {
   position: absolute;
-  left: 0;
+  left: -1.25rem;
   bottom: 0;
   z-index: 2;
-  width: 48%;
+  width: 36%;
   aspect-ratio: 1;
   box-shadow: 0 16px 40px rgba(11, 31, 58, 0.18);
 }
@@ -420,12 +420,13 @@ body {
   .hero-v2-stat-divider { display: none; }
   .hero-v2-stat { min-width: calc(50% - 0.5rem); }
   .hero-v2-frame--main { width: 100%; }
-  .hero-v2-frame--secondary { width: 42%; }
+  .hero-v2-frame--secondary { width: 32%; }
 }
 
 @media (max-width: 640px) {
   .hero-v2 { padding-top: 6.5rem; }
   .hero-v2-visual { min-height: 300px; }
+  .hero-v2-frame--secondary { left: -0.75rem; }
   .hero-v2-cert { top: 0.75rem; left: 0.75rem; padding: 0.6rem 0.8rem; }
   .hero-v2-cert svg { width: 22px; height: 22px; }
 }
